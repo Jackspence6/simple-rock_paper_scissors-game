@@ -29,6 +29,7 @@ function playGame() {
   //   If statement to determine if user plays or not
   if (!userChoice) {
     console.log("No Play");
+    return;
   }
 
   //  Computer choice
