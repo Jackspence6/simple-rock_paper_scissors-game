@@ -19,6 +19,10 @@ var computerChoice = entryOptions[pcIndex];
 
 window.alert("The computer chose " + computerChoice)
 
+/* ----------------------- Ensure that user only selects available options ---------------------- */
+if (userChoice != entryOptions) {
+    console.log("Please select between R, P and S only!");
+}
 
 
 
