@@ -56,7 +56,7 @@ function playGame() {
     (computerChoice === "S" && userChoice === "P")
   ) {
     console.log("loss");
-    window.alert("You lose;(");
+    window.alert("You lose ;(");
     losses++;
   } else {
     console.log("win");
