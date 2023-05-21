@@ -1,3 +1,5 @@
+See the live deployment of my game using this link:  
+<https://jackspence6.github.io/simple-rock_paper_scissors-game/>  
 # simple-rock_paper_scissors-game
 This is a simple game of Rock, Paper, Scissors using only JavaScript.
 
@@ -22,3 +24,6 @@ The completed application should meet the following criteria:
 * The computer's selection must be random to ensure a fair game.  
 ## Below is a visual representation of the game being played:  
 **![Visual representation of the game.](./assets/images/rps_AdobeExpress.gif)
+
+
+[def]: ttps://jackspence6.github.io/simple-rock_paper_scissors-game
