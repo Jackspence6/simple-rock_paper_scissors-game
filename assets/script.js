@@ -32,20 +32,23 @@ function playGame() {
     return;
   }
 
+  //   Ensure that user only selects available options
+  if (!userEntryOptions.includes(userChoice)) {
+    console.log("User input is not accepted!");
+    window.alert("Please select between R, P, and S only!");
+    return;
+  }
+
   //  Computer choice
   var pcIndex = Math.floor(Math.random() * entryOptions.length);
   var computerChoice = entryOptions[pcIndex];
 
   window.alert("The computer chose " + computerChoice);
 
-  //   Ensure that user only selects available options
-  if (!userEntryOptions.includes(userChoice)) {
-    console.log("Please select between R, P, and S only!");
-  }
-
   //   Win, loss or draw calculator
   if (computerChoice === userChoice) {
     console.log("tie");
+    window.alert("It's a Tie");
     ties++;
   } else if (
     (computerChoice === "R" && userChoice === "S") ||
@@ -53,14 +56,18 @@ function playGame() {
     (computerChoice === "S" && userChoice === "P")
   ) {
     console.log("loss");
+    window.alert("You lose;(");
     losses++;
   } else {
     console.log("win");
+    window.alert("You win!");
     wins++;
   }
 
   //   Wins, Losses and Ties live calculator
-  console.log(
-    "Stats: " + "wins: " + wins + ", Losses: " + losses + ", Ties: " + ties
+  console.log("Stats will be displayed to user.");
+
+  window.alert(
+    "Stats:\nwins: " + wins + "\nLosses: " + losses + ",\nTies: " + ties
   );
 }
