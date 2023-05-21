@@ -14,32 +14,31 @@ window.alert("Click OK to start game");
 
 /* --------------------------- Function that allows user to play game --------------------------- */
 function playGame() {
-
-  /* --------------------------------- Users choice to play or not -------------------------------- */
+  //   Users choice to play or not
   var userChoice = window.prompt("Please enter R, P or S");
 
-  /* ------------------ Converting userChoice to upper case for easier comparison ----------------- */
+  //   Converting userChoice to upper case for easier comparison
   if (userChoice !== null) {
     userChoice = userChoice.toUpperCase();
   }
 
-  /* ----------------------- If statement to determine if user plays or not ----------------------- */
+  //   If statement to determine if user plays or not
   if (!userChoice) {
     console.log("No Play");
   }
 
-  /* --------------------------------------- Computer choice -------------------------------------- */
+  //  Computer choice
   var pcIndex = Math.floor(Math.random() * entryOptions.length);
   var computerChoice = entryOptions[pcIndex];
 
   window.alert("The computer chose " + computerChoice);
 
-  /* ----------------------- Ensure that user only selects available options ---------------------- */
+  //   Ensure that user only selects available options
   if (!userEntryOptions.includes(userChoice)) {
     console.log("Please select between R, P, and S only!");
   }
 
-  /* -------------------------------- Win, loss or draw calculator -------------------------------- */
+  //   Win, loss or draw calculator
   if (computerChoice === userChoice) {
     console.log("tie");
     ties++;
@@ -55,7 +54,7 @@ function playGame() {
     wins++;
   }
 
-  /* ---------------------------- Wins, Losses and Ties live calculator --------------------------- */
+  //   Wins, Losses and Ties live calculator
   console.log(
     "Stats: " + "wins: " + wins + ", Losses: " + losses + ", Ties: " + ties
   );
