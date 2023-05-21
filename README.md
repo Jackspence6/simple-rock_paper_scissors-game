@@ -19,4 +19,6 @@ The completed application should meet the following criteria:
 
 * Must use the `alert()`, `confirm()`, and `prompt()` methods to collect user input and display information to the user.
 
-* The computer's selection must be random to ensure a fair game.
+* The computer's selection must be random to ensure a fair game.  
+## Below is a visual representation of the game being played:  
+**![Visual representation of the game.](./assets/images/rps_AdobeExpress.gif)
