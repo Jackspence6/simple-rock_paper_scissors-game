@@ -11,6 +11,10 @@ var userEntryOptions = ["R", "P", "S", "r", "p", "s"];
 
 /* ------------------------------ Window alert that starts the game ----------------------------- */
 window.alert("Click OK to start game");
+// If statement that only enables game once user clicks "OK"
+if (window.alert) {
+  playGame();
+}
 
 /* --------------------------- Function that allows user to play game --------------------------- */
 function playGame() {
