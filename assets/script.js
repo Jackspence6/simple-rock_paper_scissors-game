@@ -6,8 +6,13 @@ var ties = 0;
 /* ------------------------------------- Computer entry options ------------------------------------- */
 var entryOptions = ["R", "P", "S"];
 
+/* ------------------------------------- User entry options ------------------------------------- */
+var userEntryOptions = ["R", "P", "S", "r", "p", "s"];
+
 /* --------------------------------- Users choice to play or not -------------------------------- */
 var userChoice = window.prompt("Please enter R, P or S");
+
+userChoice = userChoice.toUpperCase();
 
 if (!userChoice) {
     console.log("No Play");
@@ -20,8 +25,8 @@ var computerChoice = entryOptions[pcIndex];
 window.alert("The computer chose " + computerChoice)
 
 /* ----------------------- Ensure that user only selects available options ---------------------- */
-if (userChoice != entryOptions) {
-    console.log("Please select between R, P and S only!");
+if (!userEntryOptions.includes(userChoice)) {
+    console.log("Please select between R, P, and S only!");
 }
 
 
