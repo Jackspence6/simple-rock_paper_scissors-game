@@ -70,13 +70,12 @@ function playGame() {
   window.alert(
     "Stats:\nwins: " + wins + "\nLosses: " + losses + ",\nTies: " + ties
   );
-/* --------------------------------- Play again option for user --------------------------------- */
-  var playGameAgain = window.confirm("Do you want to play the game again?");
   
-// Instruction if user selects "OK" to play game again
+  /* --------------------------------- Play again option for user --------------------------------- */
+  var playGameAgain = window.confirm("Do you want to play the game again?");
+
+  // Instruction if user selects "OK" to play game again
   if (playGameAgain) {
     playGame();
   }
 }
-
-
