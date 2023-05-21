@@ -9,7 +9,12 @@ var entryOptions = ["R", "P", "S"];
 /* ------------------------------------- User entry options ------------------------------------- */
 var userEntryOptions = ["R", "P", "S", "r", "p", "s"];
 
+/* ------------------------------ Window alert that starts the game ----------------------------- */
+window.alert("Click OK to start game");
+
+/* --------------------------- Function that allows user to play game --------------------------- */
 function playGame() {
+
   /* --------------------------------- Users choice to play or not -------------------------------- */
   var userChoice = window.prompt("Please enter R, P or S");
 
