@@ -12,8 +12,12 @@ var userEntryOptions = ["R", "P", "S", "r", "p", "s"];
 /* --------------------------------- Users choice to play or not -------------------------------- */
 var userChoice = window.prompt("Please enter R, P or S");
 
-userChoice = userChoice.toUpperCase();
+/* ------------------ Converting userChoice to upper case for easier comparison ----------------- */
+if (userChoice !== null) {
+ userChoice = userChoice.toUpperCase();   
+}
 
+/* ----------------------- If statement to determine if user plays or not ----------------------- */
 if (!userChoice) {
   console.log("No Play");
 }
@@ -32,12 +36,18 @@ if (!userEntryOptions.includes(userChoice)) {
 /* -------------------------------- Win, loss or draw calculator -------------------------------- */
 if (computerChoice === userChoice ) {
    console.log("tie"); 
+   ties ++;
 } else if (
     (computerChoice === "R" && userChoice === "S") ||
     (computerChoice === "P" && userChoice === "R") ||
     (computerChoice === "S" && userChoice === "P") 
 ) {
    console.log("loss"); 
+   losses ++;
 } else {
     console.log("win");
+    wins ++;
 } 
+
+/* ---------------------------- Wins, Losses and Ties live calculator --------------------------- */
+console.log("Stats: " + "wins: " + wins + ", Losses: " + losses + ", Ties: " + ties);
